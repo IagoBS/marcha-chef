@@ -1,38 +1,50 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { FaShoppingCart } from 'react-icons/fa';
-
 import { ListRestaurants, Container } from './styles';
 import api from '../../services/api';
+import * as CartActions from '../../store/modules/cart/actions';
 import { formatPrice } from '../../ultil/format';
 
-export default class Home extends Component {
+class Home extends Component {
   state = {
-    restaurants: [],
+    menus: [],
   };
 
   async componentDidMount() {
     const response = await api.get('/products');
-    const data = response.data.map((restaurant) => ({
-      ...restaurant,
-      priceFormated: formatPrice(restaurant.price),
+    const data = response.data.map((menu) => ({
+      ...menu,
+      priceFormated: formatPrice(menu.price),
     }));
-    this.setState({ restaurants: data });
+    this.setState({ menus: data });
   }
 
+  handleAddProduct = (id) => {
+    const { addToCartRequest } = this.props;
+    addToCartRequest(id);
+  };
+
   render() {
-    const { restaurants } = this.state;
+    const { menus } = this.state;
+    const { amount } = this.props;
     return (
       <Container>
         <h1>Restaurantes</h1>
         <ListRestaurants>
-          {restaurants.map((restaurant) => (
-            <li key={restaurant.id}>
-              <img src={restaurant.image} alt={restaurant.title} />
-              <strong>{restaurant.title}</strong>
-              <span> {restaurant.priceFormated}</span>
-              <button type="button">
+          {menus.map((menu) => (
+            <li key={menu.id}>
+              <img src={menu.image} alt={menu.title} />
+              <strong>{menu.title}</strong>
+              <span> {menu.priceFormated}</span>
+              <button
+                type="button"
+                onClick={() => this.handleAddProduct(menu.id)}
+              >
                 <div>
-                  <FaShoppingCart size={32} color="#fff" /> 3
+                  <FaShoppingCart size={32} color="#fff" />{' '}
+                  {amount[menu.id] || 0}
                 </div>
                 <span>Adicionar ao carrinho</span>
               </button>
@@ -43,3 +55,13 @@ export default class Home extends Component {
     );
   }
 }
+const mapStateToProps = (state) => ({
+  amount: state.cart.reduce((amount, menu) => {
+    amount[menu.id] = menu.amount || 0;
+    return amount;
+  }, {}),
+});
+const mapDisPatchToProps = (dispatch) =>
+  bindActionCreators(CartActions, dispatch);
+
+export default connect(mapStateToProps, mapDisPatchToProps)(Home);

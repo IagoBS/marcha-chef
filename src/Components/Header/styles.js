@@ -7,7 +7,6 @@ export const Content = styled.header`
   padding: 0 30px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 `;
 

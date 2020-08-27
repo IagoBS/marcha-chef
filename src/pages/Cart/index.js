@@ -1,10 +1,18 @@
 import React from 'react';
-
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { FaTrashAlt, FaMinusSquare, FaPlus } from 'react-icons/fa';
+import { formatPrice } from '../../ultil/format';
+import * as CartActions from '../../store/modules/cart/actions';
 import { Container, ProductTable, Side, Total } from './styles';
-import restaurant from '../../assets/images/image11.jpg';
 
-function Cart() {
+function Cart({ cart, total, removeToCart, updateAmount }) {
+  function increment(menu) {
+    updateAmount(menu.id, menu.amount + 1);
+  }
+  function decrement(menu) {
+    updateAmount(menu.id, menu.amount - 1);
+  }
   return (
     <Container>
       <ProductTable>
@@ -17,45 +25,60 @@ function Cart() {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>
-              <img src={restaurant} alt="" />
-            </td>
-            <td>
-              <strong>Coxinha de frango</strong>
-              <span>R$ 4,99</span>
-            </td>
-            <td>
-              <div>
-                <button type="button">
-                  <FaMinusSquare size={20} color="#FF8A00" />
+          {cart.map((menu) => (
+            <tr>
+              <td>
+                <img src={menu.image} alt={menu.title} />
+              </td>
+              <td>
+                <strong>{menu.title}</strong>
+                <span>{menu.priceFormated}</span>
+              </td>
+              <td>
+                <div>
+                  <button type="button" onClick={() => decrement(menu)}>
+                    <FaMinusSquare size={20} color="#FF8A00" />
+                  </button>
+                  <input type="number" readOnly value={menu.amount} />
+                  <button type="button" onClick={() => increment(menu)}>
+                    <FaPlus size={20} color="#FF8A00" />
+                  </button>
+                </div>
+              </td>
+              <td>
+                <strong>{menu.subTotal}</strong>
+              </td>
+              <td>
+                <button type="button" onClick={() => removeToCart(menu.id)}>
+                  <FaTrashAlt size={20} color="#ff0000" />
                 </button>
-                <input type="number" readOnly value={1} />
-                <button type="button">
-                  <FaPlus size={20} color="#FF8A00" />
-                </button>
-              </div>
-            </td>
-            <td>
-              <strong>R$ 10,00</strong>
-            </td>
-            <td>
-              <button type="button">
-                <FaTrashAlt size={20} color="#ff0000" />
-              </button>
-            </td>
-          </tr>
+              </td>
+            </tr>
+          ))}
         </tbody>
       </ProductTable>
       <Side>
         <button type="button">Finalizar pedido</button>
         <Total>
           <span>TOTAL</span>
-          <strong>R$1000,99</strong>
+          <strong>{total}</strong>
         </Total>
       </Side>
     </Container>
   );
 }
+const mapStateProps = (state) => ({
+  cart: state.cart.map((menu) => ({
+    ...menu,
+    subTotal: formatPrice(menu.price * menu.amount),
+  })),
+  total: formatPrice(
+    state.cart.reduce((total, menu) => {
+      return total + menu.price * menu.amount;
+    }, 0)
+  ),
+});
 
-export default Cart;
+const mapDispatchToProps = (dispatch) =>
+  bindActionCreators(CartActions, dispatch);
+export default connect(mapStateProps, mapDispatchToProps)(Cart);

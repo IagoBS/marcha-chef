@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import { connect } from 'react-redux';
 import {
   FaHamburger,
   FaHome,
@@ -14,7 +14,7 @@ import { Cart, Navigation, Perfil, Logo, Content, List } from './styles';
 import logo from '../../assets/images/logo.svg';
 import perfil from '../../assets/images/cara.svg';
 
-function Header() {
+function Header({ cartSize }) {
   return (
     <Content>
       <Logo>
@@ -59,7 +59,7 @@ function Header() {
       <Cart to="/cart">
         <div>
           <strong>Meu carrinho</strong>
-          <span>3 itens</span>
+          <span>{cartSize} itens</span>
         </div>
         <FaCartPlus size={36} color="#FFC000" />
       </Cart>
@@ -72,4 +72,6 @@ function Header() {
   );
 }
 
-export default Header;
+export default connect((state) => ({
+  cartSize: state.cart.length,
+}))(Header);
