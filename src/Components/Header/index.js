@@ -24,7 +24,7 @@ function Header({ cartSize }) {
       </Logo>
       <Navigation>
         <ul>
-          <li>
+          <li>w
             <List>
               <FaHome size={32} />
               Home
