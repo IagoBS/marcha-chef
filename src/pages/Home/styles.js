@@ -1,6 +1,13 @@
 import styled from 'styled-components';
 
+
+export const Section = styled.section`
+padding: 5rem 0;
+
+`
+
 export const Container = styled.div`
+
   margin-top: 64px;
   h1 {
     display: flex;
@@ -20,30 +27,7 @@ export const Container = styled.div`
     color: #ffc000;
   }
 `;
-export const Banner = styled.div`
-  height: 380px;
-  width: 100%;
-  background: linear-gradient(
-    253.58deg,
-    #ffc000 1.55%,
-    #ff9e00 60.2%,
-    #ff8a00 95.8%
-  );
-  box-shadow: 0px 4px 100px rgba(198, 134, 10, 0.25);
-  display: flex;
-  flex-direction: column;
 
-  flex-shrink: 1;
-  h1 {
-    margin-top: 68px;
-    margin-left: 128px;
-    font-family: Proxima Nova;
-    font-size: 48px;
-    line-height: 158.34%;
-
-    color: #fff7df;
-  }
-`;
 export const ListRestaurants = styled.ul`
   display: grid;
   grid-template-columns: repeat(3, 1fr);

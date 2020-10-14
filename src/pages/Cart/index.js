@@ -1,17 +1,30 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+import { connect, useDispatch, useSelector } from 'react-redux';
 import { FaTrashAlt, FaMinusSquare, FaPlus } from 'react-icons/fa';
 import { formatPrice } from '../../ultil/format';
 import * as CartActions from '../../store/modules/cart/actions';
 import { Container, ProductTable, Side, Total } from './styles';
 
-function Cart({ cart, total, removeToCart, updateAmount }) {
+export default function Cart() {
+  const total = useSelector((state) =>
+    formatPrice(
+      state.cart.reduce((totalSum, menu) => {
+        return totalSum + menu.price * menu.amount;
+      }, 0)
+    )
+  );
+  const cart = useSelector((state) =>
+    state.cart.map((menu) => ({
+      ...menu,
+      subTotal: formatPrice(menu.price * menu.amount),
+    }))
+  );
+  const dispatch = useDispatch();
   function increment(menu) {
-    updateAmount(menu.id, menu.amount + 1);
+    dispatch(CartActions.updateAmountRequest(menu.id, menu.amount + 1));
   }
   function decrement(menu) {
-    updateAmount(menu.id, menu.amount - 1);
+    dispatch(CartActions.updateAmountRequest(menu.id, menu.amount - 1));
   }
   return (
     <Container>
@@ -49,7 +62,10 @@ function Cart({ cart, total, removeToCart, updateAmount }) {
                 <strong>{menu.subTotal}</strong>
               </td>
               <td>
-                <button type="button" onClick={() => removeToCart(menu.id)}>
+                <button
+                  type="button"
+                  onClick={() => dispatch(CartActions.removeToCart(menu.id))}
+                >
                   <FaTrashAlt size={20} color="#ff0000" />
                 </button>
               </td>
@@ -67,18 +83,3 @@ function Cart({ cart, total, removeToCart, updateAmount }) {
     </Container>
   );
 }
-const mapStateProps = (state) => ({
-  cart: state.cart.map((menu) => ({
-    ...menu,
-    subTotal: formatPrice(menu.price * menu.amount),
-  })),
-  total: formatPrice(
-    state.cart.reduce((total, menu) => {
-      return total + menu.price * menu.amount;
-    }, 0)
-  ),
-});
-
-const mapDispatchToProps = (dispatch) =>
-  bindActionCreators(CartActions, dispatch);
-export default connect(mapStateProps, mapDispatchToProps)(Cart);

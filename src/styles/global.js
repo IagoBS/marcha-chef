@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
@@ -6,7 +7,7 @@ export default createGlobalStyle`
   margin: 0;
   padding: 0;
   outline: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 body {
   background: #FFF7DF;
@@ -17,7 +18,7 @@ body, input, button {
   font: 'Roboto', sans-serif;
 }
 #root {
-max-width: 1200px;
+max-width: 1500px;
 padding: 0 20px 50px;
 margin: 0 auto;
 

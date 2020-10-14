@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 import {
   FaHamburger,
   FaHome,
@@ -8,13 +8,15 @@ import {
   FaAddressCard,
   FaCalendarPlus,
   FaCartPlus,
+  FaClosedCaptioning
 } from 'react-icons/fa';
 import { Cart, Navigation, Perfil, Logo, Content, List } from './styles';
 
 import logo from '../../assets/images/logo.svg';
 import perfil from '../../assets/images/cara.svg';
 
-function Header({ cartSize }) {
+export default function Header() {
+  const cartSize = useSelector((state) => state.cart.length);
   return (
     <Content>
       <Logo>
@@ -24,7 +26,7 @@ function Header({ cartSize }) {
       </Logo>
       <Navigation>
         <ul>
-          <li>w
+          <li>
             <List>
               <FaHome size={32} />
               Home
@@ -71,7 +73,3 @@ function Header({ cartSize }) {
     </Content>
   );
 }
-
-export default connect((state) => ({
-  cartSize: state.cart.length,
-}))(Header);

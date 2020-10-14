@@ -31,12 +31,8 @@ function cart() {
         }
       });
 
-    case '@cart/UPDATE_AMOUNT':
+    case '@cart/UPDATE_AMOUNT_SUCESS':
       {
-        if (action.amount <= 0) {
-          return state;
-        }
-
         return (0, _immer["default"])(state, function (draft) {
           var menuIndex = draft.findIndex(function (r) {
             return r.id === action.id;

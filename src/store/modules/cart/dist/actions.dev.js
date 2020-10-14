@@ -6,7 +6,8 @@ Object.defineProperty(exports, "__esModule", {
 exports.addToCartRequest = addToCartRequest;
 exports.addToCartSucess = addToCartSucess;
 exports.removeToCart = removeToCart;
-exports.updateAmount = updateAmount;
+exports.updateAmountRequest = updateAmountRequest;
+exports.updateAmountSucess = updateAmountSucess;
 
 function addToCartRequest(id) {
   return {
@@ -29,9 +30,17 @@ function removeToCart(id) {
   };
 }
 
-function updateAmount(id, amount) {
+function updateAmountRequest(id, amount) {
   return {
-    type: '@cart/UPDATE_AMOUNT',
+    type: '@cart/UPDATE_AMOUNT_REQUEST',
+    id: id,
+    amount: amount
+  };
+}
+
+function updateAmountSucess(id, amount) {
+  return {
+    type: '@cart/UPDATE_AMOUNT_SUCESS',
     id: id,
     amount: amount
   };

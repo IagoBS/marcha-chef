@@ -2,18 +2,19 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const Content = styled.header`
-  max-width: 1500px;
+  width: 100%;
   background: #ffff;
-  padding: 0 30px;
-  margin: 0 auto;
   display: flex;
+  justify-content: center;
   align-items: center;
+  padding: 0 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.09);
 `;
 
 export const Navigation = styled.nav`
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
   ul {
     display: flex;
+    align-items: center;
     list-style: none;
   }
   li {
