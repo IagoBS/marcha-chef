@@ -7,15 +7,24 @@ export default createGlobalStyle`
   margin: 0;
   padding: 0;
   outline: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
+}
+*:focus {
+  outline: 0;
 }
 body {
-  background: #FFF7DF;
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
 }
 body, input, button {
-  font: 'Roboto', sans-serif;
+  font: 14px 'Roboto', sans-serif;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
 }
 #root {
 max-width: 1500px;

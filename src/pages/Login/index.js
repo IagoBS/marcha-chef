@@ -1,9 +1,9 @@
 import React from 'react';
 
-// import { Container } from './styles';
+import { Container } from './styles';
 
 function Login() {
-  return <div />;
+  return <h1>login</h1>;
 }
 
 export default Login;
