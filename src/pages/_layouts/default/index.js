@@ -8,4 +8,3 @@ export default function DefaultAuth({ children }) {
 DefaultAuth.prototype = {
   children: PropTypes.element.isRequired,
 };
-

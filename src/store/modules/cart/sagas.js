@@ -3,7 +3,6 @@ import { toast } from 'react-toastify';
 import api from '../../../services/api';
 import { formatPrice } from '../../../ultil/format';
 import { addToCartSucess, updateAmountSucess } from './actions';
-import history from '../../../services/history';
 
 function* addTocart({ id }) {
   const response = yield call(api.get, `/products/${id}`);

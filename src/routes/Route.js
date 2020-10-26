@@ -1,15 +1,15 @@
 import React from 'react';
 import propTypes from 'prop-types';
 import { Route, Redirect } from 'react-router-dom';
-import AuthLayout from '~/pages/_layouts/auth';
-import DefaultLayout from '~/pages/_layouts/default';
+
+import { store } from '~/store/';
 
 export default function RouterWapper({
   component: Component,
   isPrivate = false,
   ...rest
 }) {
-  const singed = false;
+  const { singed } = store.getState().auth;
   if (!singed && isPrivate) {
     return <Redirect to="/login" />;
   }
@@ -18,18 +18,7 @@ export default function RouterWapper({
     return <Redirect to="/dashboard" />;
   }
 
-  const Layout = singed ? DefaultLayout : AuthLayout;
-
-  return (
-    <Route
-      {...rest}
-      render={(props) => (
-        <Layout>
-          <Component {...props} />
-        </Layout>
-      )}
-    />
-  );
+  return <Route {...rest} render={(props) => <Component {...props} />} />;
 }
 RouterWapper.propTypes = {
   isPrivate: propTypes.bool,
