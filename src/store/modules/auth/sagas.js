@@ -2,7 +2,7 @@ import { takeLatest, put, call, all } from 'redux-saga/effects';
 import { toast } from 'react-toastify';
 
 import api from '../../../services/api';
-import { signInSucess, signFail, singOut } from './actions';
+import { signInSucess, signFail } from './actions';
 import history from '../../../services/history';
 
 export function* signIn({ payload }) {

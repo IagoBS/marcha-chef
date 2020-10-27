@@ -4,6 +4,7 @@ import 'react-perfect-scrollbar/dist/css/styles.css';
 
 export default createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
 * {
   margin: 0;
   padding: 0;

@@ -12,10 +12,22 @@ export default function Header() {
   return (
     <Container>
       <Content>
+        <div className="menu-section">
+          <div className="menu-toggle">
+            <div className="one" />
+            <div className="two" />
+            <div className="three" />
+          </div>
+        </div>
         <nav>
           <Link to="/">
             <img src={logo} alt="MarchaChef" height={64} />
           </Link>
+          <ul>
+            <li>Home</li>
+            <li>Restaurantes</li>
+            <li>Receitas</li>
+          </ul>
         </nav>
         <aside>
           <Cart to="/cart">

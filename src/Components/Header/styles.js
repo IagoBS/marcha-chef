@@ -1,15 +1,16 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-export const Container = styled.div`
+export const Container = styled.header`
   height: 64px;
   background-color: #fbab7e;
   background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
-  padding: 0 30px;
+  padding: 0 px;
 `;
 
-export const Content = styled.header`
+export const Content = styled.div`
   height: 64px;
+  width: 90%;
   max-width: 900px;
   margin: 0 auto;
 
@@ -28,10 +29,84 @@ export const Content = styled.header`
       font-weight: bold;
       color: #888;
     }
+    ul {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      li {
+        display: flex;
+        align-items: center;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+
+        line-height: 18px;
+        color: #ff8a00;
+        margin-left: 16px;
+      }
+    }
   }
   aside {
     display: flex;
     align-items: center;
+  }
+  @media (max-width: 767.98px) {
+    nav {
+      display: none;
+    }
+    .one,
+    .two,
+    .three {
+      align-items: center;
+      background: #ffff;
+      height: 8px;
+      width: 100%;
+      margin: 6px;
+      transition-duration: 0.3ms;
+    }
+    .menu-toggle {
+      width: 40px;
+      height: 30px;
+      margin-right: 20px;
+    }
+    .menu-section.on {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #ff8a18;
+      width: 50vw;
+      height: 100vh;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .menu-section.on nav {
+      display: block;
+    }
+    .menu-section.on .menu-toggle {
+      position: absolute;
+      right: 0;
+      top: 15px;
+    }
+    .menu-section.on .menu-toggle .one {
+      transform: rotate(45deg) translate(7px 7px);
+    }
+    .menu-section.on .menu-toggle .two {
+      opacity: 0;
+    }
+    .menu-section.on .menu-toggle .three {
+      transform: rotate(45deg) translate(8px -7px);
+    }
+    .menu-section.on nav ul {
+      text-align: center;
+      display: block;
+    }
+    .menu-section nav ul a {
+      transition-duration: 0.5s;
+      font-size: 3rem;
+      line-height: 8rem;
+    }
   }
   border-bottom: 1px solid rgba(0, 0, 0, 0.09);
 `;
@@ -132,5 +207,5 @@ export const Perfil = styled(Link)`
 export const Logo = styled.div`
   display: flex;
   align-items: center;
-  margin-left: 32px;
+  margin-left: 64px;
 `;

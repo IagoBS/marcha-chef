@@ -1,15 +1,14 @@
 import styled from 'styled-components';
-
-
-export const Section = styled.section`
-padding: 5rem 0;
-
-`
+import { darken } from 'polished';
+import cafe from '~/assets/images/unnamed.jpg';
 
 export const Container = styled.div`
-
-  margin-top: 64px;
-  h1 {
+  svg {
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+  }
+  > h1 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,10 +23,102 @@ export const Container = styled.div`
     line-height: 158.34%;
 
     text-align: center;
-    color: #ffc000;
+    color: #ffc099;
   }
 `;
 
+export const Hero = styled.section`
+  width: 100%;
+  height: 60vh;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+`;
+export const ContainerNavigation = styled.div`
+  h2 {
+    font-family: Proxima Nova;
+    line-height: 158.34%;
+    color: #ffffff;
+    font-size: 8rem;
+    font-weight: 100;
+    line-height: 0.8;
+    letter-spacing: 2px;
+  }
+  span {
+    text-transform: uppercase;
+    font-size: 10.3rem;
+  }
+  h1 {
+    color: #fff;
+    font-size: 3.7rem;
+    font-family: var(--main-font);
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 0.5rem;
+    margin-right: -0.5rem;
+  }
+`;
+export const HeadLine = styled.div`
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+  letter-spacing: 3px;
+  margin-right: -3px;
+`;
+export const Separator = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .line {
+    width: 100%;
+    max-width: 8.4rem;
+    height: 0.25rem;
+    background-color: #fff;
+    position: relative;
+  }
+  .line-right::before,
+  .line-left::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 0.6rem solid transparent;
+  }
+  .line-right::before {
+    border-right-color: #fff;
+    right: 0;
+  }
+  .line-left::before {
+    border-left-color: #fff;
+    left: 0;
+  }
+  .astericks {
+    font-size: 1.2rem;
+    color: var(--secondary-font-color);
+    margin: 0 1.6rem;
+  }
+`;
+export const Single = styled.div`
+  a {
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    &:hover {
+      background: ${darken(0.03, '#FF8A00')};
+    }
+  }
+`;
 export const ListRestaurants = styled.ul`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -94,4 +185,14 @@ export const ListRestaurants = styled.ul`
       }
     }
   }
+`;
+export const Signature = styled.button`
+  background-color: #eb648c;
+  border-radius: 2rem;
+  color: #fafafa;
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 1rem 2.5rem;
+  text-transform: uppercase;
+  transition: background-color 1s;
 `;

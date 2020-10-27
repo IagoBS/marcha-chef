@@ -28,7 +28,7 @@ function AvatarInput() {
   return (
     <Container>
       <label htmlFor="avatar">
-        <img src={preview } alt="" />
+        <img src={preview} alt="" />
         <input
           type="file"
           id="avatar"
