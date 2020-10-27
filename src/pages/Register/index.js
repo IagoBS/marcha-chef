@@ -9,6 +9,9 @@ import { Wrapper, Content } from './styles';
 
 function Register() {
   const dispatch = useDispatch();
+  function handleSubimit({ name, email, password }) {
+    dispatch(signUpRequest(name, email, password));
+  }
 
   const schema = Yup.object().shape({
     name: Yup.string().required('O campo nome é obrigátorio'),
@@ -16,13 +19,11 @@ function Register() {
       .email('Insira um e-mail válido')
       .required('O campo e-mail é obrigatório'),
     password: Yup.string().required('O campo senha é obrigátorio'),
-    confirm_password: Yup.string().when('password', (password, field) =>
+    password_confirmation: Yup.string().when('password', (password, field) =>
       password ? field.required().oneOf([Yup.ref('password')]) : field
     ),
   });
-  function handleSubimit({ name, email, password }) {
-    dispatch(signUpRequest(name, email, password));
-  }
+
   return (
     <>
       <Wrapper>
@@ -49,8 +50,8 @@ function Register() {
             />
             <Input
               type="password"
-              name="confirm_password"
-              id="confirm_password"
+              name="password_confirmation"
+              id="password_confirmation"
               placeholder="Confirme sua senha"
             />
             <button type="submit">Crie sua conta</button>

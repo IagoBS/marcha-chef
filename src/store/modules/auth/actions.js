@@ -1,5 +1,3 @@
-import { func } from 'prop-types';
-
 export function signInRequest(email, password) {
   return {
     type: '@auth/SINGIN_REQUEST',
@@ -21,5 +19,10 @@ export function signUpRequest(name, email, password) {
 export function signFail() {
   return {
     type: '@auth/SIGN_FAIL',
+  };
+}
+export function singOut() {
+  return {
+    type: '@user/SIGN_OUT',
   };
 }

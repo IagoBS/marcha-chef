@@ -6,6 +6,7 @@ import Cart from './pages/Cart';
 import DashBoard from './pages/DashBoard';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Profile from './pages/Profile';
 
 export default function Routes() {
   return (
@@ -13,6 +14,7 @@ export default function Routes() {
       <Route path="/" exact component={Home} />
       <Route path="/cart" component={Cart} />
       <Route path="/login" component={Login} />
+      <Route path="/perfil" component={Profile} />
       <Route path="/register" component={Register} />
       <Route path="/dashboard" component={DashBoard} isPrivate />
     </Switch>

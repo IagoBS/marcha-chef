@@ -1,8 +1,8 @@
 import { takeLatest, put, call, all } from 'redux-saga/effects';
 import { toast } from 'react-toastify';
-import { func } from 'prop-types';
+
 import api from '../../../services/api';
-import { signInSucess, signFail } from './actions';
+import { signInSucess, signFail, singOut } from './actions';
 import history from '../../../services/history';
 
 export function* signIn({ payload }) {
@@ -40,7 +40,22 @@ export function* singUp({ payload }) {
     yield put(signFail());
   }
 }
+export function setToken({ payload }) {
+  if (!payload) {
+    return;
+  }
+  const { token } = payload.auth;
+  if (token) {
+    api.defaults.headers.Authorization = `Bearer ${token}`;
+  }
+}
+export function* SingOutUser() {
+  yield call(api.post, 'logout');
+  history.push('/');
+}
 export default all([
+  takeLatest('persist/REHYDRATE', setToken),
   takeLatest('@auth/SINGIN_REQUEST', signIn),
   takeLatest('@auth/@auth/SINGUP_REQUEST', singUp),
+  takeLatest('@auth/SIGN_OUT', SingOutUser),
 ]);
