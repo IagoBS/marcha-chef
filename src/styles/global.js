@@ -30,7 +30,7 @@ ul {
 }
 #root {
 max-width: 1500px;
-padding: 0 20px 50px;
+
 margin: 0 auto;
 
 }

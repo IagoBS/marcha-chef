@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { darken } from 'polished';
+import { darken, lighten } from 'polished';
 import cafe from '~/assets/images/unnamed.jpg';
 
 export const Container = styled.div`
@@ -35,6 +35,7 @@ export const Hero = styled.section`
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin-top: 64px;
 `;
 export const ContainerNavigation = styled.div`
   h2 {
@@ -116,6 +117,10 @@ export const Single = styled.div`
     display: block;
     &:hover {
       background: ${darken(0.03, '#FF8A00')};
+    }
+    &:focus {
+      color: #fff;
+      background-color: ${lighten(0.03, '#FF8A44')};
     }
   }
 `;
