@@ -24,9 +24,18 @@ export default function Header() {
             <img src={logo} alt="MarchaChef" height={64} />
           </Link>
           <ul>
-            <li>Home</li>
+            <Link to="/">
+            <li>Página Incial</li>
+            </Link>
+            <Link to="/restaurantes">
             <li>Restaurantes</li>
+            </Link>
+            <Link to="/receitas">
             <li>Receitas</li>
+            </Link>
+            <Link to="/contato">
+              <li>Contato</li>
+            </Link>
           </ul>
         </nav>
         <aside>

@@ -7,7 +7,7 @@ import DashBoard from './pages/DashBoard';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Profile from './pages/Profile';
-
+import Menu from './pages/Menu';
 export default function Routes() {
   return (
     <Switch>
@@ -16,6 +16,7 @@ export default function Routes() {
       <Route path="/login" component={Login} />
       <Route path="/perfil" component={Profile} />
       <Route path="/register" component={Register} />
+      <Route path="/menus" component={Menu} />
       <Route path="/dashboard" component={DashBoard} isPrivate />
     </Switch>
   );

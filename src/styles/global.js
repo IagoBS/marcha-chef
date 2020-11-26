@@ -10,31 +10,42 @@ export default createGlobalStyle`
   padding: 0;
   outline: 0;
   box-sizing: border-box;
+
 }
-*:focus {
-  outline: 0;
-}
+
 body {
+  background-color: #f6d365;
   background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  background-size: cover;
+  height: 100vh;
+  font-size: 14px;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
 }
-body, input, button {
-  font: 14px 'Roboto', sans-serif;
+html {
+  font-size: 62.5%;
 }
+body {
+  font-size: 1.6rem;
+}
+
 a {
-  text-decoration: none;
+text-decoration: none;
 }
 ul {
-  list-style: none;
-}
-#root {
-max-width: 1500px;
-
-margin: 0 auto;
-
+list-style: none;
 }
 button {
-  cursor: pointer;
+cursor: pointer;
 }
+main {
+  min-height: calc(100vh - 100px - 180px);
+}
+
+#root {
+margin: 0 auto;
+font-size: 63.5%;
+
+}
+
 `;

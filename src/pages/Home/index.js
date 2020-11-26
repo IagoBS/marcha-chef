@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, connect, useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { FaShoppingCart } from 'react-icons/fa';
+import { FaShoppingCart, FaShare, FaSearch } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo.svg';
-
+import imageTest from '../../assets/images/sanduichao.jpeg';
 import {
   ListRestaurants,
   Container,
@@ -14,6 +14,16 @@ import {
   Separator,
   HeadLine,
   Single,
+  ContainerProduct,
+  NewProduct,
+  ToolsProduct,
+  Search,
+  Order,
+  ContentProduct,
+  Filters,
+  HeroCard,
+  Promocoes,
+  ContainerHero,
 } from './styles';
 import api from '../../services/api';
 
@@ -79,6 +89,56 @@ export default function Home() {
           <circle fill="white" cx="0" cy="100" r="100" />
           <circle fill="white" cx="200" cy="100" r="100" />
         </svg>
+        <ContainerHero>
+          <ContentProduct>
+            <NewProduct>
+              <p>MARCHACHEF</p>
+              <p>Cárdapio para seu restaurante</p>
+              <button type="submit">Saiba mais</button>
+            </NewProduct>
+            <ToolsProduct>
+              <Search>
+                <p>Procurar Restaurante</p>
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Buscar restaurante ou pratos "
+                  ></input>
+                  <button type="button">Procurar</button>
+                </div>
+              </Search>
+              <Order>
+                <p>Filtrar</p>
+
+                <Filters>
+                  <div>
+                    <FaSearch size={12}></FaSearch>
+                  </div>
+                  <div>
+                    <FaSearch size={12}></FaSearch>
+                  </div>
+                  <div>
+                    <FaSearch size={12}></FaSearch>
+                  </div>
+                  <div>
+                    <FaSearch size={12}></FaSearch>
+                  </div>
+                </Filters>
+              </Order>
+            </ToolsProduct>
+          </ContentProduct>
+        </ContainerHero>
+        <ContainerHero>
+          <HeroCard>
+            <Link to="/">
+              <Promocoes>
+                <h1>MarchaChef</h1>
+              </Promocoes>
+            </Link>
+            <Promocoes></Promocoes>
+            <Promocoes></Promocoes>
+          </HeroCard>
+        </ContainerHero>
         <h1>Restaurantes</h1>
         <ListRestaurants>
           {menus.map((menu) => (
@@ -96,6 +156,7 @@ export default function Home() {
             </li>
           ))}
         </ListRestaurants>
+
       </Container>
     </>
   );
