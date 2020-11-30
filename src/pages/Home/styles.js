@@ -4,6 +4,7 @@ import cafe from '~/assets/images/unnamed.png';
 import hambuerguer from '~/assets/images/hambuerguer.jpg';
 import cozinheiros from '~/assets/images/cozinheiros.jpeg';
 import cozinheirosSearch from '~/assets/images/images.jpeg';
+
 export const Container = styled.div`
   margin-right: auto; /* 1 */
   margin-left: auto; /* 1 */
@@ -65,7 +66,6 @@ export const ContainerNavigation = styled.div`
   h1 {
     color: #fff;
     font-size: 3.7rem;
-    font-family: var(--main-font);
     text-transform: uppercase;
     font-weight: 900;
     letter-spacing: 0.5rem;

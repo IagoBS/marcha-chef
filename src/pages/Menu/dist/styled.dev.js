@@ -12,7 +12,7 @@ var _reactRouterDom = require("react-router-dom");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\ndisplay: flex;\nflex-direction: row;\nalign-items: center;\nflex-basis: 580px;\nmargin-bottom: 20px;\npadding-bottom: 20px;\nborder-bottom: 2px solid #ddd;\nimg {\n  display: block;\n  max-width: 100%;\n  height: 180px;\n  margin-right: 30px;\n}\n&:nth-child(5), &:nth-child(6) {\n  border-bottom: 0;\n\n}\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  flex-basis: 580px;\n  margin-bottom: 30px;\n  padding-bottom: 30px;\n  border-bottom: 2px solid #dddd;\n  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);\n  &:hover {\n    box-shadow: 10px 1px 1px rgba(0, 0, 0, 0.5);\n  }\n  img {\n    max-width: 180px;\n    margin-right: 30px;\n    border-radius: 4%;\n    border: 1px solid #ddd;\n    padding: 3px;\n  }\n  h4 {\n    display: block;\n    align-items: center;\n    text-transform: capitalize;\n    font-size: 1.8rem;\n    margin-top: 16px;\n    border-bottom: 1px dashed #333;\n    margin-bottom: 12px;\n    color: #fff;\n    span {\n      float: right;\n      color: #ff7720;\n    }\n  }\n  p {\n    color: #fff;\n    font-family: 2rem;\n  }\n  button {\n    background: linear-gradient(\n      253.58deg,\n      #ffc000 1.55%,\n      #ff9e00 60.2%,\n      #ff8a00 95.8%\n    );\n    box-shadow: 0px 4px 100px rgba(198, 134, 10, 0.25);\n    color: #fff;\n    border: 0;\n    border-radius: 4px;\n    overflow: hidden;\n    margin-top: auto;\n    display: flex;\n    align-items: center;\n    transition: background 0.2s;\n    &:hover {\n      background: linear-gradient(\n        253.58deg,\n        #ff8a00 1.55%,\n        #ff9e00 60.2%,\n        #ffc000 95.8%\n      );\n    }\n    div {\n      display: flex;\n      align-items: center;\n      padding: 12px;\n      background: rgba(0, 0, 0, 0.1);\n      svg {\n        margin-right: 5px;\n      }\n    }\n    span {\n      flex: 1;\n      text-align: center;\n      font-weight: bold;\n    }\n  }\n  &:nth-child(5),\n  &:nth-child(6) {\n    border-bottom: 0;\n  }\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -22,7 +22,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\ndisplay: flex;\ngrid-gap:  wrap;\njustify-content: space-between;\n\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-between;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;

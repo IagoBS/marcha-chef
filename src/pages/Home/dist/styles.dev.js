@@ -170,7 +170,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  h2 {\n    font-family: Proxima Nova;\n    line-height: 158.34%;\n    color: #ffffff;\n    font-size: 8rem;\n    font-weight: 100;\n    line-height: 0.8;\n    letter-spacing: 2px;\n  }\n  span {\n    text-transform: uppercase;\n    font-size: 10.3rem;\n  }\n  h1 {\n    color: #fff;\n    font-size: 3.7rem;\n    font-family: var(--main-font);\n    text-transform: uppercase;\n    font-weight: 900;\n    letter-spacing: 0.5rem;\n    margin-right: -0.5rem;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  h2 {\n    font-family: Proxima Nova;\n    line-height: 158.34%;\n    color: #ffffff;\n    font-size: 8rem;\n    font-weight: 100;\n    line-height: 0.8;\n    letter-spacing: 2px;\n  }\n  span {\n    text-transform: uppercase;\n    font-size: 10.3rem;\n  }\n  h1 {\n    color: #fff;\n    font-size: 3.7rem;\n    text-transform: uppercase;\n    font-weight: 900;\n    letter-spacing: 0.5rem;\n    margin-right: -0.5rem;\n  }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;

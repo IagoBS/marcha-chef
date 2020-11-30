@@ -8,6 +8,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Profile from './pages/Profile';
 import Menu from './pages/Menu';
+
 export default function Routes() {
   return (
     <Switch>
