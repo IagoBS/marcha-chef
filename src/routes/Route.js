@@ -10,13 +10,13 @@ export default function RouterWapper({
   ...rest
 }) {
   const { singed } = store.getState().auth;
-  if (!singed && isPrivate) {
-    return <Redirect to="/login" />;
-  }
+  // if (!singed && isPrivate) {
+  //   return <Redirect to="/login" />;
+  // }
 
-  if (singed && !isPrivate) {
-    return <Redirect to="/dashboard" />;
-  }
+  // if (singed && !isPrivate) {
+  //   return <Redirect to="/dashboard" />;
+  // }
 
   return <Route {...rest} render={(props) => <Component {...props} />} />;
 }

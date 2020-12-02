@@ -30,22 +30,11 @@ export default function Modal({ showModal, setShowModal }) {
   });
   const closeModal = (e) => {
     if (modalRef.current === e.target) {
+      console.log('eee')
       setShowModal(false);
     }
   };
-  const keyPress = useCallback(
-    (e) => {
-      if (e.key === 'Escape' && showModal) {
-        setShowModal(false);
-        console.log('I pressed');
-      }
-    },
-    [setShowModal, showModal]
-  );
-  useEffect(() => {
-    document.addEventListener('keydown', keyPress);
-    return () => document.removeEventListener('keydown', keyPress);
-  }, [keyPress]);
+
   return (
     <>
       {showModal ? (

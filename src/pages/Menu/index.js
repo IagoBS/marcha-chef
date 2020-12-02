@@ -57,7 +57,7 @@ export default function Menu() {
       </Title>
       <Wrapper>
         <MenuGrid>
-          <MenuSingle onClick={ openModal}>
+          <MenuSingle onClick={openModal}>
             <img src={Imageprato} alt="Foto da comida" />
 
             <div>
@@ -70,9 +70,9 @@ export default function Menu() {
                 em um líquido, seja em seus próprios sucos ou um licor.{' '}
               </p>
             </div>
-            <Modal showModal={showModal} setShowModal={setShowModal}/>
           </MenuSingle>
-          <MenuSingle>
+          <Modal showModal={showModal} setShowModal={setShowModal} />
+          <MenuSingle onClick={openModal}>
             <img src={Imageprato} alt="Foto da comida" />
             <div>
               <h4>
@@ -85,7 +85,7 @@ export default function Menu() {
               </p>
             </div>
           </MenuSingle>
-          <MenuSingle>
+          <MenuSingle onClick={openModal}>
             <img src={Imageprato} alt="Foto da comida" />
             <div>
               <h4>

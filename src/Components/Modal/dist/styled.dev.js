@@ -42,7 +42,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n         display: block;\n         height: 100%;\n         align-items: center;\n         justify-content: center;\n         width: 100%;\n         margin-left: 32px;\n         overflow: hidden;\n         content: '';\n         z-index: -1;\n         border-radius: 4px;\n         max-width: 100%;\n       "]);
+  var data = _taggedTemplateLiteral(["\n         display: block;\n         height: auto;\n\n         width: 100%;\n         \n         overflow: hidden;\n         content: '';\n         z-index: -1;\n         border-radius: 4px;\n         max-width: 100%;\n       "]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -52,7 +52,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  width: 600px;\n  height: auto;\n  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);\n  background: #fff;\n  color: #000;\n  display: grid;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n  grid-template-columns: 1fr 1fr;\n  position: relative;\n  z-index: 10;\n  border-radius: 10px;\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 700px;\n  height: auto;\n  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);\n  background: #fff;\n  color: #000;\n  display: grid;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n  grid-template-columns: 1fr 1fr;\n  position: relative;\n  z-index: 10;\n  border-radius: 10px;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -62,7 +62,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  height: 100%;\n  background: rgba(0, 0, 0, 0.3);\n  position: relative;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  height: 100%;\n\n  position: relative;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n"]);
 
   _templateObject = function _templateObject() {
     return data;

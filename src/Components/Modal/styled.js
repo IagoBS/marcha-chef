@@ -3,14 +3,14 @@ import { FaCloudscale } from 'react-icons/fa';
 export const Background = styled.div`
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.3);
+
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 export const ModalWrapper = styled.div`
-  width: 600px;
+  width: 700px;
   height: auto;
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
   background: #fff;
@@ -26,11 +26,10 @@ export const ModalWrapper = styled.div`
 `;
 export const ModalImg = styled.img`
          display: block;
-         height: 100%;
-         align-items: center;
-         justify-content: center;
+         height: auto;
+
          width: 100%;
-         margin-left: 32px;
+         
          overflow: hidden;
          content: '';
          z-index: -1;
