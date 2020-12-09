@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Promocoes = exports.HeroCard = exports.ContainerHero = exports.Filters = exports.Order = exports.Search = exports.ToolsProduct = exports.ContentProduct = exports.NewProduct = exports.ContainerProduct = exports.Signature = exports.ListRestaurants = exports.Single = exports.Separator = exports.HeadLine = exports.ContainerNavigation = exports.Hero = exports.Container = void 0;
+exports.Dish = exports.Calendario = exports.Post = exports.FaturedPosts = exports.About = exports.Box = exports.Fatured = exports.FeatureTitle = exports.TitleFilter = exports.Feature = exports.HeroListRestaurant = exports.Promocoes = exports.HeroCard = exports.ContainerHero = exports.Filters = exports.Order = exports.Search = exports.ToolsProduct = exports.ContentProduct = exports.NewProduct = exports.ContainerProduct = exports.Signature = exports.ListRestaurants = exports.Single = exports.Separator = exports.HeadLine = exports.ContainerNavigation = exports.Hero = exports.Container = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
@@ -18,6 +18,116 @@ var _cozinheiros = _interopRequireDefault(require("~/assets/images/cozinheiros.j
 var _images = _interopRequireDefault(require("~/assets/images/images.jpeg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function _templateObject29() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject29 = function _templateObject29() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject28() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject28 = function _templateObject28() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject27() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject27 = function _templateObject27() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject26() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject26 = function _templateObject26() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject25() {
+  var data = _taggedTemplateLiteral(["\n  img {\n    width: 100%;\n    max-width: 100%;\n    height: 300px;\n    margin-bottom: 20px;\n  }\n  p {\n    line-height: 25px;\n    text-align: justify;\n    font-weight: 600;\n    color: #333;\n    font-size: 2.4rem;\n  }\n"]);
+
+  _templateObject25 = function _templateObject25() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject24() {
+  var data = _taggedTemplateLiteral(["\n  grid-row: 1/4;\n  h2 {\n    display: flex;\n    color: #fff;\n    margin: 20px 0px;\n    font-size: 4rem;\n    letter-spacing: 8px;\n    span {\n      color: #ff8a00;\n      font-size: 2rem;\n      margin-left: 16px;\n    }\n  }\n"]);
+
+  _templateObject24 = function _templateObject24() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject23() {
+  var data = _taggedTemplateLiteral(["\n  margin-top: 8px;\n  display: grid;\n  grid-template-columns: 400px 400px 400px;\n  grid-gap: 20px 20px;\n  margin: 0 auto;\n  padding: 20px 0px;\n  background-color: #ffae84;\n  background-image: linear-gradient(62deg, #ffae84 0%, #ffd35e 100%);\n  border-radius: 8px;\n  box-shadow: 0 0 20px #eee;\n"]);
+
+  _templateObject23 = function _templateObject23() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject22() {
+  var data = _taggedTemplateLiteral(["\n  position: absolute;\n  letter-spacing: 4px;\n  bottom: 0;\n  margin: 5px 10px;\n  color: #fff;\n  div {\n    border-left: 1px solid #fff;\n  }\n  p {\n    display: flex;\n    align-items: center;\n    letter-spacing: 2px;\n    a {\n      color: #222;\n      margin: 0 15px;\n    }\n  }\n  h1 {\n    font-size: 2rem;\n    display: flex;\n    align-items: center;\n    text-align: center;\n  }\n"]);
+
+  _templateObject22 = function _templateObject22() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject21() {
+  var data = _taggedTemplateLiteral(["\n  position: absolute;\n  bottom: 0;\n  background: #333;\n  opacity: 50%;\n  width: 100%;\n  max-width: 1400;\n  height: 22%;\n"]);
+
+  _templateObject21 = function _templateObject21() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject20() {
+  var data = _taggedTemplateLiteral(["\n  position: relative;\n  @media (max-width: 767.9px) {\n    margin-top: 16px;\n  }\n  img {\n    width: 100%;\n    height: 100%;\n    object-fit: cover;\n  }\n  &:nth-child(1) {\n    grid-row: 1/3;\n  }\n  &:nth-child(4) {\n    grid-row: 1/3;\n    grid-column: 3/4;\n  }\n  &:nth-child(2) h1 {\n    font-size: 1rem;\n  }\n  &:nth-child(3) h1 {\n    font-size: 1rem;\n  }\n"]);
+
+  _templateObject20 = function _templateObject20() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject19() {
+  var data = _taggedTemplateLiteral(["\n  display: grid;\n  grid-template-columns: 50% 25% 25%;\n  grid-template-rows: 300px 300px;\n  grid-gap: 5px 5px;\n  margin: 0 auto;\n  @media (max-width: 767.9px) {\n    display: block;\n    margin-top: 16px;\n  }\n  &:nth-child(1) {\n    grid-row: 1/3;\n  }\n  &:nth-child(4) {\n    grid-row: 1/3;\n    grid-column: 3/4;\n  }\n"]);
+
+  _templateObject19 = function _templateObject19() {
+    return data;
+  };
+
+  return data;
+}
 
 function _templateObject18() {
   var data = _taggedTemplateLiteral(["\n  box-shadow: 0px 4px 100px rgba(0, 0, 0, 0.25);\n  background-image: url(", ");\n  border-radius: 10px;\n\n  height: 150px;\n  width: 300px;\n\n  h1 {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    text-align: center;\n    color: #fff;\n    font-size: 3rem;\n    font-weight: 600;\n    text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);\n  }\n"]);
@@ -50,7 +160,7 @@ function _templateObject16() {
 }
 
 function _templateObject15() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  div {\n    display: flex;\n    margin-right: 25px;\n    align-items: center;\n    justify-content: center;\n    background-color: black;\n    weight: 40px;\n    height: 40px;\n    border-radius: 100%;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  div {\n    display: flex;\n    margin-right: 25px;\n    align-items: center;\n    justify-content: center;\n    background-color: black;\n    height: 40px;\n    height: 40px;\n    border-radius: 100%;\n  }\n"]);
 
   _templateObject15 = function _templateObject15() {
     return data;
@@ -272,3 +382,47 @@ exports.HeroCard = HeroCard;
 var Promocoes = _styledComponents["default"].div(_templateObject18(), _images["default"]);
 
 exports.Promocoes = Promocoes;
+
+var HeroListRestaurant = _styledComponents["default"].div(_templateObject19());
+
+exports.HeroListRestaurant = HeroListRestaurant;
+
+var Feature = _styledComponents["default"].div(_templateObject20());
+
+exports.Feature = Feature;
+
+var TitleFilter = _styledComponents["default"].div(_templateObject21());
+
+exports.TitleFilter = TitleFilter;
+
+var FeatureTitle = _styledComponents["default"].div(_templateObject22());
+
+exports.FeatureTitle = FeatureTitle;
+
+var Fatured = _styledComponents["default"].div(_templateObject23());
+
+exports.Fatured = Fatured;
+
+var Box = _styledComponents["default"].div(_templateObject24());
+
+exports.Box = Box;
+
+var About = _styledComponents["default"].div(_templateObject25());
+
+exports.About = About;
+
+var FaturedPosts = _styledComponents["default"].div(_templateObject26());
+
+exports.FaturedPosts = FaturedPosts;
+
+var Post = _styledComponents["default"].div(_templateObject27());
+
+exports.Post = Post;
+
+var Calendario = _styledComponents["default"].div(_templateObject28());
+
+exports.Calendario = Calendario;
+
+var Dish = _styledComponents["default"].div(_templateObject29());
+
+exports.Dish = Dish;

@@ -2,9 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, connect, useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { FaShoppingCart, FaShare, FaSearch } from 'react-icons/fa';
+import { Input } from '@rocketseat/unform';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo.svg';
 import imageTest from '../../assets/images/sanduichao.jpeg';
+import grid1 from '~/assets/images/grid1.jpg';
+import grid2 from '~/assets/images/grid2.jpg';
+import ifood from '~/assets/images/ifood.jpg';
 import {
   ListRestaurants,
   Container,
@@ -24,6 +28,15 @@ import {
   HeroCard,
   Promocoes,
   ContainerHero,
+  HeroListRestaurant,
+  Feature,
+  TitleFilter,
+  FeatureTitle,
+  Date,
+  DateFilter,
+  Fatured,
+  Box,
+  About,
 } from './styles';
 import api from '../../services/api';
 
@@ -89,7 +102,7 @@ export default function Home() {
           <circle fill="white" cx="0" cy="100" r="100" />
           <circle fill="white" cx="200" cy="100" r="100" />
         </svg>
-        <ContainerHero>
+        {/* <ContainerHero>
           <ContentProduct>
             <NewProduct>
               <p>MARCHACHEF</p>
@@ -104,7 +117,7 @@ export default function Home() {
                     type="text"
                     placeholder="Buscar restaurante ou pratos "
                   ></input>
-                  <button type="button">Procurar</button>
+
                 </div>
               </Search>
               <Order>
@@ -127,8 +140,8 @@ export default function Home() {
               </Order>
             </ToolsProduct>
           </ContentProduct>
-        </ContainerHero>
-        <ContainerHero>
+        </ContainerHero> */}
+        {/* <ContainerHero>
           <HeroCard>
             <Link to="/">
               <Promocoes>
@@ -138,7 +151,187 @@ export default function Home() {
             <Promocoes></Promocoes>
             <Promocoes></Promocoes>
           </HeroCard>
-        </ContainerHero>
+        </ContainerHero> */}
+
+        <h5>Grid Restaurantes</h5>
+        <Container>
+          <HeroListRestaurant>
+            <Feature>
+              <img src={grid1} alt="MarchaChef" />
+              <TitleFilter></TitleFilter>
+              <FeatureTitle>
+                <p>
+                  Categoria: <a href="">Iago</a>
+                </p>
+                <h1>Salada de fruta com tomate seco</h1>
+              </FeatureTitle>
+            </Feature>
+            <Feature>
+              <img src={grid2} alt="MarchaChef" />
+              <TitleFilter></TitleFilter>
+              <FeatureTitle>
+                <p>
+                  Autor: <a href="">Iago</a>
+                </p>
+                <h1>Salada de fruta com tomate seco</h1>
+              </FeatureTitle>
+            </Feature>
+            <Feature>
+              <img src={grid2} alt="MarchaChef" />
+              <TitleFilter></TitleFilter>
+              <FeatureTitle>
+                <p>
+                  Autor: <a href="">Iago</a>
+                </p>
+                <h1>Salada de fruta com tomate seco</h1>
+              </FeatureTitle>
+            </Feature>
+            <Feature>
+              <img src={grid2} alt="MarchaChef" />
+              <TitleFilter></TitleFilter>
+              <FeatureTitle>
+                <p>
+                  Autor: <a href="">Iago</a>
+                </p>
+                <h1>Salada de fruta com tomate seco</h1>
+              </FeatureTitle>
+            </Feature>
+            <Feature>
+              <img src={grid2} alt="MarchaChef" />
+              <TitleFilter></TitleFilter>
+              <FeatureTitle>
+                <p>
+                  Autor: <a href="">Iago</a>
+                </p>
+                <h1>Salada de fruta com tomate seco</h1>
+              </FeatureTitle>
+            </Feature>
+            <Feature>
+              <img src={grid2} alt="MarchaChef" />
+              <TitleFilter></TitleFilter>
+              <FeatureTitle>
+                <div />
+                <p>
+                  Autor: <a href="">Iago</a>
+                </p>
+                <h1>Salada de fruta com tomate seco</h1>
+              </FeatureTitle>
+            </Feature>
+            <Feature>
+              <img src={grid2} alt="MarchaChef" />
+              <TitleFilter></TitleFilter>
+              <FeatureTitle>
+                <div />
+                <p>
+                  Autor: <a href="">Iago</a>
+                </p>
+                <h1>Salada de fruta com tomate seco</h1>
+              </FeatureTitle>
+            </Feature>
+          </HeroListRestaurant>
+          {/* Fatura de destaque */}
+          <Fatured>
+            <Box>
+              <About>
+                <h2>
+                  Sobre<span>MARCHACHEF</span>
+                </h2>
+                <img src={logo} alt="MarchaChef" />
+                <p>
+                  iFood é uma empresa brasileira fundada em 2011, atuante no
+                  ramo de entrega de comida pela internet, sendo líder no setor
+                  na América Latina, com presença na Argentina, no México e na
+                  Colômbia.{' '}
+                </p>
+              </About>
+            </Box>
+          </Fatured>
+          <FaturedPosts>
+            <h2>
+              Promoções<span>MARCHACHEF</span>
+            </h2>
+            <Post>
+              <Calendario>
+                <p>
+                  9<span>Dez</span>
+                </p>
+              </Calendario>
+              <Dish>
+                <h1>Coxinha de frango com catupiry</h1>
+                <p>
+                  Coxinha de franco recada com catupiry e um monte de coisas
+                </p>
+              </Dish>
+            </Post>
+            <Post>
+              <Calendario>
+                <p>
+                  9<span>Dez</span>
+                </p>
+              </Calendario>
+              <Dish>
+                <h1>Coxinha de frango com catupiry</h1>
+                <p>
+                  Coxinha de franco recada com catupiry e um monte de coisas
+                </p>
+              </Dish>
+            </Post>
+            <Post>
+              <Calendario>
+                <p>
+                  9<span>Dez</span>
+                </p>
+              </Calendario>
+              <Dish>
+                <h1>Coxinha de frango com catupiry</h1>
+                <p>
+                  Coxinha de franco recada com catupiry e um monte de coisas
+                </p>
+              </Dish>
+            </Post>
+          </FaturedPosts>
+          <RecipeTypes>
+            <h2>
+              Categorias <span>MARCHACHEF</span>
+            </h2>
+            <TypeCategory>
+              <a href="">
+                #Pizza <span>11</span>
+              </a>
+            </TypeCategory>
+            <TypeCategory>
+              <a href="">
+                #Pizza <span>11</span>
+              </a>
+            </TypeCategory>
+            <TypeCategory>
+              <a href="">
+                #Pizza <span>11</span>
+              </a>
+            </TypeCategory>
+            <TypeCategory>
+              <a href="">
+                #Pizza <span>11</span>
+              </a>
+            </TypeCategory>
+          </RecipeTypes>
+          <Subscribe>
+            <h2>
+              Saiba mais <span>MARCHACHEF</span>
+            </h2>
+            <p>
+              Saiba mais sobre o funcionamento, e receba notificações no seu
+              e-mail sobre o MARCHACHEF
+            </p>
+            <Input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Digite seu e-mail"
+            />
+            <button type="submit">Saiba mais+</button>
+          </Subscribe>
+        </Container>
         <h1>Restaurantes</h1>
         <ListRestaurants>
           {menus.map((menu) => (
@@ -156,7 +349,6 @@ export default function Home() {
             </li>
           ))}
         </ListRestaurants>
-
       </Container>
     </>
   );

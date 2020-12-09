@@ -366,7 +366,7 @@ export const Filters = styled.div`
     align-items: center;
     justify-content: center;
     background-color: black;
-    weight: 40px;
+    height: 40px;
     height: 40px;
     border-radius: 100%;
   }
@@ -411,3 +411,130 @@ export const Promocoes = styled.div`
     text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);
   }
 `;
+export const HeroListRestaurant = styled.div`
+  display: grid;
+  grid-template-columns: 50% 25% 25%;
+  grid-template-rows: 300px 300px;
+  grid-gap: 5px 5px;
+  margin: 0 auto;
+  @media (max-width: 767.9px) {
+    display: block;
+    margin-top: 16px;
+  }
+  &:nth-child(1) {
+    grid-row: 1/3;
+  }
+  &:nth-child(4) {
+    grid-row: 1/3;
+    grid-column: 3/4;
+  }
+`;
+export const Feature = styled.div`
+  position: relative;
+  @media (max-width: 767.9px) {
+    margin-top: 16px;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &:nth-child(1) {
+    grid-row: 1/3;
+  }
+  &:nth-child(4) {
+    grid-row: 1/3;
+    grid-column: 3/4;
+  }
+  &:nth-child(2) h1 {
+    font-size: 1rem;
+  }
+  &:nth-child(3) h1 {
+    font-size: 1rem;
+  }
+`;
+export const TitleFilter = styled.div`
+  position: absolute;
+  bottom: 0;
+  background: #333;
+  opacity: 50%;
+  width: 100%;
+  max-width: 1400;
+  height: 22%;
+`;
+export const FeatureTitle = styled.div`
+  position: absolute;
+  letter-spacing: 4px;
+  bottom: 0;
+  margin: 5px 10px;
+  color: #fff;
+  div {
+    border-left: 1px solid #fff;
+  }
+  p {
+    display: flex;
+    align-items: center;
+    letter-spacing: 2px;
+    a {
+      color: #222;
+      margin: 0 15px;
+    }
+  }
+  h1 {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+`;
+export const Fatured = styled.div`
+  margin-top: 8px;
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  grid-gap: 20px 20px;
+  margin: 0 auto;
+  padding: 20px 0px;
+  background-color: #ffae84;
+  background-image: linear-gradient(62deg, #ffae84 0%, #ffd35e 100%);
+  border-radius: 8px;
+  box-shadow: 0 0 20px #eee;
+`;
+export const Box = styled.div`
+  grid-row: 1/4;
+  h2 {
+    display: flex;
+    color: #fff;
+    margin: 20px 0px;
+    font-size: 4rem;
+    letter-spacing: 8px;
+    span {
+      color: #ff8a00;
+      font-size: 2rem;
+      margin-left: 16px;
+    }
+  }
+`;
+export const About = styled.div`
+  img {
+    width: 100%;
+    max-width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+  }
+  p {
+    line-height: 25px;
+    text-align: justify;
+    font-weight: 600;
+    color: #333;
+    font-size: 2.4rem;
+  }
+`;
+export const FaturedPosts = styled.div``;
+export const  Post = styled.div``;
+export const Calendario = styled.div``;
+export const Dish = styled.div``;
+export const Post = styled.div``;
+export const Calendario = styled.div``;
+export const RecipeTypes = styled.div``;
+export const TypeCategory = styled.div``;
+export const Subscribe = styled.div``;
