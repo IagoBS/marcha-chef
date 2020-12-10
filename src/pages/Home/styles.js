@@ -137,7 +137,7 @@ export const Single = styled.div`
 `;
 export const ListRestaurants = styled.ul`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
   list-style: none;
   li {
@@ -147,6 +147,8 @@ export const ListRestaurants = styled.ul`
     background: #fff;
     border-radius: 10px;
     img {
+ 
+
       align-self: center;
       max-width: 300px;
     }
@@ -245,12 +247,6 @@ export const NewProduct = styled.div`
     line-height: 50px;
     font-weight: bold;
     font-size: 2.6rem;
-    &:nth-child(1) {
-      font-size: 2.6rem;
-    }
-    &:nth-child(2) {
-      font-size: 2.8rem;
-    }
   }
   button {
     width: 120px;
@@ -497,7 +493,6 @@ export const Fatured = styled.div`
   background-color: #ffae84;
   background-image: linear-gradient(62deg, #ffae84 0%, #ffd35e 100%);
   border-radius: 8px;
-  box-shadow: 0 0 20px #eee;
 `;
 export const Box = styled.div`
   grid-row: 1/4;
@@ -505,7 +500,7 @@ export const Box = styled.div`
     display: flex;
     color: #fff;
     margin: 20px 0px;
-    font-size: 4rem;
+    font-size: 2.1rem;
     letter-spacing: 8px;
     span {
       color: #ff8a00;
@@ -516,6 +511,7 @@ export const Box = styled.div`
 `;
 export const About = styled.div`
   img {
+    display: block;
     width: 100%;
     max-width: 100%;
     height: 300px;
@@ -525,16 +521,220 @@ export const About = styled.div`
     line-height: 25px;
     text-align: justify;
     font-weight: 600;
-    color: #333;
+    color: #fff;
     font-size: 2.4rem;
   }
 `;
 export const FaturedPosts = styled.div``;
-export const  Post = styled.div``;
-export const Calendario = styled.div``;
-export const Dish = styled.div``;
-export const Post = styled.div``;
-export const Calendario = styled.div``;
-export const RecipeTypes = styled.div``;
-export const TypeCategory = styled.div``;
-export const Subscribe = styled.div``;
+export const Post = styled.div`
+  display: flex;
+`;
+export const Calendario = styled.div`
+  width: 50px;
+  height: 60px;
+  margin: 10px;
+  background-color: darkorange;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  > p {
+    font-size: 2.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    flex-direction: column;
+    span {
+      display: block;
+      text-transform: uppercase;
+      font-size: 2rem;
+    }
+  }
+`;
+export const Dish = styled.div`
+  padding: 10px;
+  margin-top: 8px;
+  align-items: center;
+  justify-content: center;
+  > h1 {
+    font-size: 2rem;
+    color: #fff;
+  }
+  > p {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+    font-size: 1.5rem;
+  }
+`;
+
+export const RecipeTypes = styled.div`
+  font-weight: bold;
+  padding: 15px;
+  display: block;
+  width: 300px;
+  color: #333;
+`;
+export const TypeCategory = styled.div`
+  display: block;
+  padding: 16px;
+  width: 300px;
+  color: #333;
+  border-bottom: 2px solid #ddd;
+  a {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    color: #555;
+    font-size: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 1.5rem;
+    &:hover {
+      color: #ddd;
+      transition: all 1s ease-in-out;
+    }
+    span {
+      display: inline-flex;
+      color: #ff8a00;
+      background-color: #5c5c5c;
+      border-radius: 70%;
+      padding: 8px;
+      &:hover {
+        background-color: #ddd;
+        transition: all 1s ease-in-out;
+      }
+    }
+  }
+`;
+export const Subscribe = styled.div`
+  display: block;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 2.2rem;
+    color: #fff;
+    span {
+      color: #ff8a00;
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-left: 8px;
+    }
+  }
+  p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    color: #fff;
+    font-size: 1.8rem;
+  }
+  input {
+    width: 70%;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 0;
+    padding: 0px 16px;
+    height: 44px;
+    margin: 0 0 10px;
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+  button {
+    background: linear-gradient(
+      253.58deg,
+      #ffc000 1.55%,
+      #ff9e00 60.2%,
+      #ff8a00 95.8%
+    );
+    box-shadow: 0px 4px 100px rgba(198, 134, 10, 0.25);
+    color: #fff;
+    border: 0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: auto;
+    padding: 16px;
+    margin-left: 16px;
+    align-items: center;
+    transition: background 0.2s;
+    &:hover {
+      background: linear-gradient(
+        253.58deg,
+        #ff8a00 1.55%,
+        #ff9e00 60.2%,
+        #ffc000 95.8%
+      );
+    }
+  }
+`;
+export const RestaurantTops = styled.div`
+  grid-column: 2/4;
+  grid-row: 1/2;
+  position: relative;
+  text-align: center;
+  line-height: 25px;
+  img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    margin-bottom: 8px;
+  }
+  h1 {
+    margin: 20px 10px;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+    font-size: 2rem;
+    color: #5c5c5c;
+  }
+  p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #5c5c5c;
+    font-size: 1.5rem;
+  }
+  button {
+    display: block;
+    border: 2px solid #ff8a00;
+    padding: 5px 10px;
+    width: 120px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin: 4px auto;
+    color: #5c5c5c;
+    &:hover {
+      color: #ddd;
+      transition: all 1s ease-in-out;
+    }
+  }
+`;
+export const DateRestaurantTops = styled.div`
+  display: flex;
+  position: absolute;
+  background-color: #ff8a00;
+  border-radius: 2px;
+  margin: 20px;
+  p {
+    display: flex;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+    span {
+      font-size: 1.7rem;
+      margin-left: 3px;
+    }
+  }
+`;
+export const SelectedRestaurant = styled.div`
+margin-left: 16px;
+`;

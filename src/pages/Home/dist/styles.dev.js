@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Dish = exports.Calendario = exports.Post = exports.FaturedPosts = exports.About = exports.Box = exports.Fatured = exports.FeatureTitle = exports.TitleFilter = exports.Feature = exports.HeroListRestaurant = exports.Promocoes = exports.HeroCard = exports.ContainerHero = exports.Filters = exports.Order = exports.Search = exports.ToolsProduct = exports.ContentProduct = exports.NewProduct = exports.ContainerProduct = exports.Signature = exports.ListRestaurants = exports.Single = exports.Separator = exports.HeadLine = exports.ContainerNavigation = exports.Hero = exports.Container = void 0;
+exports.SelectedRestaurant = exports.DateRestaurantTops = exports.RestaurantTops = exports.Subscribe = exports.TypeCategory = exports.RecipeTypes = exports.Dish = exports.Calendario = exports.Post = exports.FaturedPosts = exports.About = exports.Box = exports.Fatured = exports.FeatureTitle = exports.TitleFilter = exports.Feature = exports.HeroListRestaurant = exports.Promocoes = exports.HeroCard = exports.ContainerHero = exports.Filters = exports.Order = exports.Search = exports.ToolsProduct = exports.ContentProduct = exports.NewProduct = exports.ContainerProduct = exports.Signature = exports.ListRestaurants = exports.Single = exports.Separator = exports.HeadLine = exports.ContainerNavigation = exports.Hero = exports.Container = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
@@ -19,8 +19,68 @@ var _images = _interopRequireDefault(require("~/assets/images/images.jpeg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
+function _templateObject35() {
+  var data = _taggedTemplateLiteral(["\nmargin-left: 16px;\n"]);
+
+  _templateObject35 = function _templateObject35() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject34() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  position: absolute;\n  background-color: #ff8a00;\n  border-radius: 2px;\n  margin: 20px;\n  p {\n    display: flex;\n    color: #fff;\n    text-align: center;\n    font-weight: bold;\n    font-size: 1.3rem;\n    span {\n      font-size: 1.7rem;\n      margin-left: 3px;\n    }\n  }\n"]);
+
+  _templateObject34 = function _templateObject34() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject33() {
+  var data = _taggedTemplateLiteral(["\n  grid-column: 2/4;\n  grid-row: 1/2;\n  position: relative;\n  text-align: center;\n  line-height: 25px;\n  img {\n    width: 100%;\n    height: 600px;\n    object-fit: cover;\n    margin-bottom: 8px;\n  }\n  h1 {\n    margin: 20px 10px;\n    letter-spacing: 2px;\n    font-size: 1.5rem;\n    font-size: 2rem;\n    color: #5c5c5c;\n  }\n  p {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    color: #5c5c5c;\n    font-size: 1.5rem;\n  }\n  button {\n    display: block;\n    border: 2px solid #ff8a00;\n    padding: 5px 10px;\n    width: 120px;\n    letter-spacing: 2px;\n    font-weight: bold;\n    margin: 4px auto;\n    color: #5c5c5c;\n    &:hover {\n      color: #ddd;\n      transition: all 1s ease-in-out;\n    }\n  }\n"]);
+
+  _templateObject33 = function _templateObject33() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject32() {
+  var data = _taggedTemplateLiteral(["\n  display: block;\n  align-items: center;\n  justify-content: center;\n  h1 {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    text-align: center;\n    font-size: 2.2rem;\n    color: #fff;\n    span {\n      color: #ff8a00;\n      font-size: 2.5rem;\n      font-weight: bold;\n      margin-left: 8px;\n    }\n  }\n  p {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    padding: 16px;\n    color: #fff;\n    font-size: 1.8rem;\n  }\n  input {\n    width: 70%;\n    background: rgba(0, 0, 0, 0.1);\n    border-radius: 8px;\n    border: 0;\n    padding: 0px 16px;\n    height: 44px;\n    margin: 0 0 10px;\n    &::placeholder {\n      color: rgba(255, 255, 255, 0.7);\n    }\n  }\n  button {\n    background: linear-gradient(\n      253.58deg,\n      #ffc000 1.55%,\n      #ff9e00 60.2%,\n      #ff8a00 95.8%\n    );\n    box-shadow: 0px 4px 100px rgba(198, 134, 10, 0.25);\n    color: #fff;\n    border: 0;\n    border-radius: 4px;\n    overflow: hidden;\n    margin-top: auto;\n    padding: 16px;\n    margin-left: 16px;\n    align-items: center;\n    transition: background 0.2s;\n    &:hover {\n      background: linear-gradient(\n        253.58deg,\n        #ff8a00 1.55%,\n        #ff9e00 60.2%,\n        #ffc000 95.8%\n      );\n    }\n  }\n"]);
+
+  _templateObject32 = function _templateObject32() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject31() {
+  var data = _taggedTemplateLiteral(["\n  display: block;\n  padding: 16px;\n  width: 300px;\n  color: #333;\n  border-bottom: 2px solid #ddd;\n  a {\n    display: flex;\n    justify-content: space-between;\n    margin-left: 20px;\n    color: #555;\n    font-size: 1.5rem;\n    align-items: center;\n    justify-content: space-between;\n    font-weight: bold;\n    font-size: 1.5rem;\n    &:hover {\n      color: #ddd;\n      transition: all 1s ease-in-out;\n    }\n    span {\n      display: inline-flex;\n      color: #ff8a00;\n      background-color: #5c5c5c;\n      border-radius: 70%;\n      padding: 8px;\n      &:hover {\n        background-color: #ddd;\n        transition: all 1s ease-in-out;\n      }\n    }\n  }\n"]);
+
+  _templateObject31 = function _templateObject31() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject30() {
+  var data = _taggedTemplateLiteral(["\n  font-weight: bold;\n  padding: 15px;\n  display: block;\n  width: 300px;\n  color: #333;\n"]);
+
+  _templateObject30 = function _templateObject30() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject29() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n  padding: 10px;\n  margin-top: 8px;\n  align-items: center;\n  justify-content: center;\n  > h1 {\n    font-size: 2rem;\n    color: #fff;\n  }\n  > p {\n    display: block;\n    align-items: center;\n    justify-content: center;\n    margin-top: 8px;\n    font-size: 1.5rem;\n  }\n"]);
 
   _templateObject29 = function _templateObject29() {
     return data;
@@ -30,7 +90,7 @@ function _templateObject29() {
 }
 
 function _templateObject28() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n  width: 50px;\n  height: 60px;\n  margin: 10px;\n  background-color: darkorange;\n  justify-content: center;\n  align-items: center;\n  padding: 10px;\n  > p {\n    font-size: 2.3rem;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    text-align: center;\n    color: #fff;\n    font-weight: bold;\n    flex-direction: column;\n    span {\n      display: block;\n      text-transform: uppercase;\n      font-size: 2rem;\n    }\n  }\n"]);
 
   _templateObject28 = function _templateObject28() {
     return data;
@@ -40,7 +100,7 @@ function _templateObject28() {
 }
 
 function _templateObject27() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n"]);
 
   _templateObject27 = function _templateObject27() {
     return data;
@@ -60,7 +120,7 @@ function _templateObject26() {
 }
 
 function _templateObject25() {
-  var data = _taggedTemplateLiteral(["\n  img {\n    width: 100%;\n    max-width: 100%;\n    height: 300px;\n    margin-bottom: 20px;\n  }\n  p {\n    line-height: 25px;\n    text-align: justify;\n    font-weight: 600;\n    color: #333;\n    font-size: 2.4rem;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  img {\n    display: block;\n    width: 100%;\n    max-width: 100%;\n    height: 300px;\n    margin-bottom: 20px;\n  }\n  p {\n    line-height: 25px;\n    text-align: justify;\n    font-weight: 600;\n    color: #fff;\n    font-size: 2.4rem;\n  }\n"]);
 
   _templateObject25 = function _templateObject25() {
     return data;
@@ -70,7 +130,7 @@ function _templateObject25() {
 }
 
 function _templateObject24() {
-  var data = _taggedTemplateLiteral(["\n  grid-row: 1/4;\n  h2 {\n    display: flex;\n    color: #fff;\n    margin: 20px 0px;\n    font-size: 4rem;\n    letter-spacing: 8px;\n    span {\n      color: #ff8a00;\n      font-size: 2rem;\n      margin-left: 16px;\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  grid-row: 1/4;\n  h2 {\n    display: flex;\n    color: #fff;\n    margin: 20px 0px;\n    font-size: 2.1rem;\n    letter-spacing: 8px;\n    span {\n      color: #ff8a00;\n      font-size: 2rem;\n      margin-left: 16px;\n    }\n  }\n"]);
 
   _templateObject24 = function _templateObject24() {
     return data;
@@ -80,7 +140,7 @@ function _templateObject24() {
 }
 
 function _templateObject23() {
-  var data = _taggedTemplateLiteral(["\n  margin-top: 8px;\n  display: grid;\n  grid-template-columns: 400px 400px 400px;\n  grid-gap: 20px 20px;\n  margin: 0 auto;\n  padding: 20px 0px;\n  background-color: #ffae84;\n  background-image: linear-gradient(62deg, #ffae84 0%, #ffd35e 100%);\n  border-radius: 8px;\n  box-shadow: 0 0 20px #eee;\n"]);
+  var data = _taggedTemplateLiteral(["\n  margin-top: 8px;\n  display: grid;\n  grid-template-columns: 400px 400px 400px;\n  grid-gap: 20px 20px;\n  margin: 0 auto;\n  padding: 20px 0px;\n  background-color: #ffae84;\n  background-image: linear-gradient(62deg, #ffae84 0%, #ffd35e 100%);\n  border-radius: 8px;\n"]);
 
   _templateObject23 = function _templateObject23() {
     return data;
@@ -210,7 +270,7 @@ function _templateObject11() {
 }
 
 function _templateObject10() {
-  var data = _taggedTemplateLiteral(["\n  width: 540px;\n  height: auto;\n  max-width: 100%;\n  border-radius: 10px;\n  background-image: url(", ");\n\n  background-repeat: no-repeat;\n  background-size: cover;\n  text-align: center;\n  font-weight: 600;\n  color: #fff;\n  border: none;\n  box-shadow: 4px 7px 21px rgba(0, 0, 0, 0.7);\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n\n  p {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    text-align: center;\n    line-height: 50px;\n    font-weight: bold;\n    font-size: 2.6rem;\n    &:nth-child(1) {\n      font-size: 2.6rem;\n    }\n    &:nth-child(2) {\n      font-size: 2.8rem;\n    }\n  }\n  button {\n    width: 120px;\n    height: 35px;\n    margin-left: 200px;\n    border-radius: 8px;\n    background-color: #ff8a00;\n    text-align: center;\n    font-weight: bold;\n    border: 0;\n    outline: 0;\n    text-align: center;\n    color: #fff;\n    box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.25);\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 540px;\n  height: auto;\n  max-width: 100%;\n  border-radius: 10px;\n  background-image: url(", ");\n\n  background-repeat: no-repeat;\n  background-size: cover;\n  text-align: center;\n  font-weight: 600;\n  color: #fff;\n  border: none;\n  box-shadow: 4px 7px 21px rgba(0, 0, 0, 0.7);\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n\n  p {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    text-align: center;\n    line-height: 50px;\n    font-weight: bold;\n    font-size: 2.6rem;\n  }\n  button {\n    width: 120px;\n    height: 35px;\n    margin-left: 200px;\n    border-radius: 8px;\n    background-color: #ff8a00;\n    text-align: center;\n    font-weight: bold;\n    border: 0;\n    outline: 0;\n    text-align: center;\n    color: #fff;\n    box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.25);\n  }\n"]);
 
   _templateObject10 = function _templateObject10() {
     return data;
@@ -240,7 +300,7 @@ function _templateObject8() {
 }
 
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  grid-gap: 20px;\n  list-style: none;\n  li {\n    display: flex;\n    flex-direction: column;\n    padding: 20px;\n    background: #fff;\n    border-radius: 10px;\n    img {\n      align-self: center;\n      max-width: 300px;\n    }\n    > strong {\n      font-size: 16px;\n      line-height: 20px;\n      color: #333;\n      margin-top: 5px;\n    }\n    > span {\n      font-size: 21px;\n      font-weight: bold;\n      margin: 5px 0 20px;\n    }\n    button {\n      background: linear-gradient(\n        253.58deg,\n        #ffc000 1.55%,\n        #ff9e00 60.2%,\n        #ff8a00 95.8%\n      );\n      box-shadow: 0px 4px 100px rgba(198, 134, 10, 0.25);\n      color: #fff;\n      border: 0;\n      border-radius: 4px;\n      overflow: hidden;\n      margin-top: auto;\n      display: flex;\n      align-items: center;\n      transition: background 0.2s;\n      &:hover {\n        background: linear-gradient(\n          253.58deg,\n          #ff8a00 1.55%,\n          #ff9e00 60.2%,\n          #ffc000 95.8%\n        );\n      }\n      div {\n        display: flex;\n        align-items: center;\n        padding: 12px;\n        background: rgba(0, 0, 0, 0.1);\n        svg {\n          margin-right: 5px;\n        }\n      }\n      span {\n        flex: 1;\n        text-align: center;\n        font-weight: bold;\n      }\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: grid;\n  grid-template-columns: repeat(2, 1fr);\n  grid-gap: 20px;\n  list-style: none;\n  li {\n    display: flex;\n    flex-direction: column;\n    padding: 20px;\n    background: #fff;\n    border-radius: 10px;\n    img {\n \n\n      align-self: center;\n      max-width: 300px;\n    }\n    > strong {\n      font-size: 16px;\n      line-height: 20px;\n      color: #333;\n      margin-top: 5px;\n    }\n    > span {\n      font-size: 21px;\n      font-weight: bold;\n      margin: 5px 0 20px;\n    }\n    button {\n      background: linear-gradient(\n        253.58deg,\n        #ffc000 1.55%,\n        #ff9e00 60.2%,\n        #ff8a00 95.8%\n      );\n      box-shadow: 0px 4px 100px rgba(198, 134, 10, 0.25);\n      color: #fff;\n      border: 0;\n      border-radius: 4px;\n      overflow: hidden;\n      margin-top: auto;\n      display: flex;\n      align-items: center;\n      transition: background 0.2s;\n      &:hover {\n        background: linear-gradient(\n          253.58deg,\n          #ff8a00 1.55%,\n          #ff9e00 60.2%,\n          #ffc000 95.8%\n        );\n      }\n      div {\n        display: flex;\n        align-items: center;\n        padding: 12px;\n        background: rgba(0, 0, 0, 0.1);\n        svg {\n          margin-right: 5px;\n        }\n      }\n      span {\n        flex: 1;\n        text-align: center;\n        font-weight: bold;\n      }\n    }\n  }\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -426,3 +486,27 @@ exports.Calendario = Calendario;
 var Dish = _styledComponents["default"].div(_templateObject29());
 
 exports.Dish = Dish;
+
+var RecipeTypes = _styledComponents["default"].div(_templateObject30());
+
+exports.RecipeTypes = RecipeTypes;
+
+var TypeCategory = _styledComponents["default"].div(_templateObject31());
+
+exports.TypeCategory = TypeCategory;
+
+var Subscribe = _styledComponents["default"].div(_templateObject32());
+
+exports.Subscribe = Subscribe;
+
+var RestaurantTops = _styledComponents["default"].div(_templateObject33());
+
+exports.RestaurantTops = RestaurantTops;
+
+var DateRestaurantTops = _styledComponents["default"].div(_templateObject34());
+
+exports.DateRestaurantTops = DateRestaurantTops;
+
+var SelectedRestaurant = _styledComponents["default"].div(_templateObject35());
+
+exports.SelectedRestaurant = SelectedRestaurant;

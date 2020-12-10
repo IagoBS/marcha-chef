@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, connect, useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { FaShoppingCart, FaShare, FaSearch } from 'react-icons/fa';
+import { FaShoppingCart, FaShare, FaSearch, FaPlus } from 'react-icons/fa';
 import { Input } from '@rocketseat/unform';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo.svg';
@@ -37,6 +37,16 @@ import {
   Fatured,
   Box,
   About,
+  FaturedPosts,
+  Post,
+  Dish,
+  Calendario,
+  RecipeTypes,
+  TypeCategory,
+  Subscribe,
+  RestaurantTops,
+  DateRestaurantTops,
+  SelectedRestaurant,
 } from './styles';
 import api from '../../services/api';
 
@@ -171,7 +181,7 @@ export default function Home() {
               <TitleFilter></TitleFilter>
               <FeatureTitle>
                 <p>
-                  Autor: <a href="">Iago</a>
+                  Categoria: <a href="">Iago</a>
                 </p>
                 <h1>Salada de fruta com tomate seco</h1>
               </FeatureTitle>
@@ -181,7 +191,7 @@ export default function Home() {
               <TitleFilter></TitleFilter>
               <FeatureTitle>
                 <p>
-                  Autor: <a href="">Iago</a>
+                  Categoria: <a href="">Iago</a>
                 </p>
                 <h1>Salada de fruta com tomate seco</h1>
               </FeatureTitle>
@@ -191,7 +201,7 @@ export default function Home() {
               <TitleFilter></TitleFilter>
               <FeatureTitle>
                 <p>
-                  Autor: <a href="">Iago</a>
+                  Categoria: <a href="">Iago</a>
                 </p>
                 <h1>Salada de fruta com tomate seco</h1>
               </FeatureTitle>
@@ -201,18 +211,7 @@ export default function Home() {
               <TitleFilter></TitleFilter>
               <FeatureTitle>
                 <p>
-                  Autor: <a href="">Iago</a>
-                </p>
-                <h1>Salada de fruta com tomate seco</h1>
-              </FeatureTitle>
-            </Feature>
-            <Feature>
-              <img src={grid2} alt="MarchaChef" />
-              <TitleFilter></TitleFilter>
-              <FeatureTitle>
-                <div />
-                <p>
-                  Autor: <a href="">Iago</a>
+                  Categoria: <a href="">Iago</a>
                 </p>
                 <h1>Salada de fruta com tomate seco</h1>
               </FeatureTitle>
@@ -223,7 +222,18 @@ export default function Home() {
               <FeatureTitle>
                 <div />
                 <p>
-                  Autor: <a href="">Iago</a>
+                  Categoria: <a href="">Iago</a>
+                </p>
+                <h1>Salada de fruta com tomate seco</h1>
+              </FeatureTitle>
+            </Feature>
+            <Feature>
+              <img src={grid2} alt="MarchaChef" />
+              <TitleFilter></TitleFilter>
+              <FeatureTitle>
+                <div />
+                <p>
+                  Categoria: <a href="">Iago</a>
                 </p>
                 <h1>Salada de fruta com tomate seco</h1>
               </FeatureTitle>
@@ -244,81 +254,164 @@ export default function Home() {
                   Colômbia.{' '}
                 </p>
               </About>
+              <FaturedPosts>
+                <h2>
+                  Promoções<span>MARCHACHEF</span>
+                </h2>
+                <Post>
+                  <Calendario>
+                    <p>
+                      09<span>Dez</span>
+                    </p>
+                  </Calendario>
+                  <Dish>
+                    <h1>Coxinha de frango com catupiry</h1>
+                    <p>
+                      Coxinha de franco recada com catupiry e um monte de coisas
+                    </p>
+                  </Dish>
+                </Post>
+                <Post>
+                  <Calendario>
+                    <p>
+                      09<span>Dez</span>
+                    </p>
+                  </Calendario>
+                  <Dish>
+                    <h1>Coxinha de frango com catupiry</h1>
+                    <p>
+                      Coxinha de franco recada com catupiry e um monte de coisas
+                    </p>
+                  </Dish>
+                </Post>
+                <Post>
+                  <Calendario>
+                    <p>
+                      09<span>Dez</span>
+                    </p>
+                  </Calendario>
+                  <Dish>
+                    <h1>Coxinha de frango com catupiry</h1>
+                    <p>
+                      Coxinha de franco recada com catupiry e um monte de coisas
+                    </p>
+                  </Dish>
+                </Post>
+              </FaturedPosts>
+
+              <RecipeTypes>
+                <h2>
+                  Categorias <span>MARCHACHEF</span>
+                </h2>
+                <TypeCategory>
+                  <a href="">
+                    #Pizza <span>11</span>
+                  </a>
+                </TypeCategory>
+                <TypeCategory>
+                  <a href="">
+                    #Pizza <span>11</span>
+                  </a>
+                </TypeCategory>
+                <TypeCategory>
+                  <a href="">
+                    #Pizza <span>11</span>
+                  </a>
+                </TypeCategory>
+                <TypeCategory>
+                  <a href="">
+                    #Pizza <span>11</span>
+                  </a>
+                </TypeCategory>
+              </RecipeTypes>
             </Box>
+            <RestaurantTops>
+              <DateRestaurantTops>
+                <p>
+                  Destaque da semana: <span>Pizza</span>
+                </p>
+              </DateRestaurantTops>
+              <img src={grid2} alt="MarchaChef" />
+              <h1>Pizza com arroz e feijão</h1>
+              <p>
+                is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy
+              </p>
+              <button type="button">Veja o destaque da semana</button>
+            </RestaurantTops>
+            <SelectedRestaurant>
+              {/* <ListRestaurants>
+                {menus.map((menu) => (
+                  <li key={menu.id}>
+                    <img src={menu.image} alt={menu.title} />
+                    <strong>{menu.title}</strong>
+                    <span> {menu.priceFormated}</span>
+                    <button
+                      type="button"
+                      onClick={() => handleAddProduct(menu.id)}
+                    >
+                      <div>
+                        <FaShoppingCart size={32} color="#fff" />{' '}
+                        {amount[menu.id] || 0}
+                      </div>
+                      <span>Adicionar ao carrinho</span>
+                    </button>
+                  </li>
+                ))}
+              </ListRestaurants>
+            </SelectedRestaurant> */}
+              <ListRestaurants>
+                <li>
+                  <img src={grid2} alt="MarchaChef" />
+                  <strong>MAnoa</strong>
+                  <span>R$12,00</span>
+                  <button type="button">
+                    <div>
+                      <FaShoppingCart size={32} color="#fff" />{' '}
+                    </div>
+                    <span>Adicionar ao carrinho</span>
+                  </button>
+                </li>
+                <li>
+                  <img src={grid2} alt="MarchaChef" />
+                  <strong>MAnoa</strong>
+                  <span>R$12,00</span>
+                  <button type="button">
+                    <div>
+                      <FaShoppingCart size={32} color="#fff" />{' '}
+                    </div>
+                    <span>Adicionar ao carrinho</span>
+                  </button>
+                </li>
+                <li>
+                  <img src={grid2} alt="MarchaChef" />
+                  <strong>MAnoa</strong>
+                  <span>R$12,00</span>
+                  <button type="button">
+                    <div>
+                      <FaShoppingCart size={32} color="#fff" />{' '}
+                    </div>
+                    <span>Adicionar ao carrinho</span>
+                  </button>
+                </li>
+                <li>
+                  <img src={grid2} alt="MarchaChef" />
+                  <strong>MAnoa</strong>
+                  <span>R$12,00</span>
+                  <button type="button">
+                    <div>
+                      <FaShoppingCart size={32} color="#fff" />{' '}
+                    </div>
+                    <span>Adicionar ao carrinho</span>
+                  </button>
+                </li>
+              </ListRestaurants>
+            </SelectedRestaurant>
           </Fatured>
-          <FaturedPosts>
-            <h2>
-              Promoções<span>MARCHACHEF</span>
-            </h2>
-            <Post>
-              <Calendario>
-                <p>
-                  9<span>Dez</span>
-                </p>
-              </Calendario>
-              <Dish>
-                <h1>Coxinha de frango com catupiry</h1>
-                <p>
-                  Coxinha de franco recada com catupiry e um monte de coisas
-                </p>
-              </Dish>
-            </Post>
-            <Post>
-              <Calendario>
-                <p>
-                  9<span>Dez</span>
-                </p>
-              </Calendario>
-              <Dish>
-                <h1>Coxinha de frango com catupiry</h1>
-                <p>
-                  Coxinha de franco recada com catupiry e um monte de coisas
-                </p>
-              </Dish>
-            </Post>
-            <Post>
-              <Calendario>
-                <p>
-                  9<span>Dez</span>
-                </p>
-              </Calendario>
-              <Dish>
-                <h1>Coxinha de frango com catupiry</h1>
-                <p>
-                  Coxinha de franco recada com catupiry e um monte de coisas
-                </p>
-              </Dish>
-            </Post>
-          </FaturedPosts>
-          <RecipeTypes>
-            <h2>
-              Categorias <span>MARCHACHEF</span>
-            </h2>
-            <TypeCategory>
-              <a href="">
-                #Pizza <span>11</span>
-              </a>
-            </TypeCategory>
-            <TypeCategory>
-              <a href="">
-                #Pizza <span>11</span>
-              </a>
-            </TypeCategory>
-            <TypeCategory>
-              <a href="">
-                #Pizza <span>11</span>
-              </a>
-            </TypeCategory>
-            <TypeCategory>
-              <a href="">
-                #Pizza <span>11</span>
-              </a>
-            </TypeCategory>
-          </RecipeTypes>
           <Subscribe>
-            <h2>
+            <h1>
               Saiba mais <span>MARCHACHEF</span>
-            </h2>
+            </h1>
             <p>
               Saiba mais sobre o funcionamento, e receba notificações no seu
               e-mail sobre o MARCHACHEF
@@ -329,10 +422,12 @@ export default function Home() {
               id="email"
               placeholder="Digite seu e-mail"
             />
-            <button type="submit">Saiba mais+</button>
+            <button type="button">
+              <span>Saiba Mais</span>
+            </button>
           </Subscribe>
         </Container>
-        <h1>Restaurantes</h1>
+        {/* <h1>Restaurantes</h1>
         <ListRestaurants>
           {menus.map((menu) => (
             <li key={menu.id}>
@@ -348,7 +443,7 @@ export default function Home() {
               </button>
             </li>
           ))}
-        </ListRestaurants>
+        </ListRestaurants> */}
       </Container>
     </>
   );
